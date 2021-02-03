@@ -3,9 +3,7 @@
     padding: 0;
 }
 $col: #727272;
-body{
- 
-}
+
 .site-wrapper{
     // display: flex;
     width: 100%;
@@ -16,15 +14,19 @@ body{
 .container_allheader{
     display: flex;
     flex-direction: column;
+    // border: 3px solid rgb(89, 0, 255);
+
 }
 .top-nav{
     display: block;
     float: left;
     width: 100%;
+    height: 50px;
     background: #f3f3f3;
     border-bottom: 1px solid #e3e3e3;
     color: #999;
     font-size: 18px;
+    z-index: 99;
 }
 .nav-container{
     display: flex;
@@ -66,30 +68,30 @@ body{
     position: relative;
 }
 .btnlang{
+    box-sizing: border-box;
     color: #999;
     margin-left: 0px;
+    height: 50px;
     padding: 16px 16px;
     border-right: 1px solid #f3f3f3;
     border-left: 1px solid #f3f3f3;
     transition: all 0.5s ease;
-    text-transform: uppercase !important;
-    position: relative;
+    text-transform: uppercase;
     top: 8px;
     text-decoration: none;
 }
 .btnlang:hover, .btnlang.active {
+    box-sizing: border-box;
+    height: 100%;
     color: #fff;
     background: #e22e25;
     text-decoration: none;
 }
-.btnlang.disabled {
-    pointer-events: none !important;
-}
 
 header {
     display: block;
-    position: fixed;
-    z-index: 1000!important;
+    // position: fixed;
+    // z-index: 1000!important;
     top: 48px;
     left: 0;
     width: 100%;
@@ -122,6 +124,11 @@ header {
     text-transform: uppercase;
     font-size: 50px;
     font-weight: 700;
+    transition: all 0.7s ease;
+    &:hover{
+        color: rgb(89, 0, 255);
+        transition: all 0.7s ease;
+    }
     }
 }
 .bottom-nav{
@@ -144,26 +151,109 @@ header {
     }
 }
 .dropdown{
-    // width: 100px;
     cursor: pointer;
-    // border: 2px solid blue;
+    // border: 2px solid yellow;
+    z-index: 9999;
+    & a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: $col;
+    font-weight: 500;
+    // border: 1px solid red;
+    background-color: white;
+    padding: 2px;
+    &:hover{
+        color: red;
+    }
 }
+}
+   .after::after{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent; 
+}
+
 .dropdown ul{
     list-style: none;
     padding: 0;
+    
 }
 .dropdown-ul {
     box-sizing: border-box;
+    width: 120px;
     display: none;
 }
 .dropdown:hover{
-    .dropdown-ul {
+    .dropdown-ul{
     display: block;
+    margin-top: 10px;
     // border: 2px solid red;
     background: #fff;
-    transition: ease 0.5s;
     }
 }
-.dropdown-ul  {
+.dropdown-ul li{
+    margin-top: 10px;
+    list-style: none;
+}
+.dropdown-block{
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    transition: all 1s ease;
+    & li{
+        list-style: none;
+        color: $col;
+    }
+}
+.connect{
     width: 120px;
+}
+li a{
+    text-decoration: none;
+    color: $col;
+    &:hover{
+        color: red;
+        transition: all 0.7s ease;
+    }
+}
+
+
+// ----------------------------------------------------------------
+.carousel-inner{
+    height: 600px;
+    width: 300px;
+}
+// .block-up{
+//     display: flex;
+//     justify-content: center;
+//     height: 600px;
+//     width: 100%;
+//     position: absolute;
+//     border: 2px solid red;
+//     z-index: 100;
+//     // background: white;
+//     opacity: 0.4;
+// }
+.pay-at_home{
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    // background-color: white;
+    text-transform: uppercase;
+    color: black;
+    z-index: 100;
+    font-weight: 700;
+    color: white;
+    // border: 2px solid red;
 }
