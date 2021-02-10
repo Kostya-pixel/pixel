@@ -2,20 +2,15 @@
     motion: 0;
     padding: 0;
 }
-$col: #727272;
-
+@import "./app/styles/variable.scss";
 .site-wrapper{
-    // display: flex;
     width: 100%;
     height: 800px;
     margin: 0 auto 0 auto;
-    // border: 3px solid rgb(89, 0, 255);
 }
 .container_allheader{
     display: flex;
     flex-direction: column;
-    // border: 3px solid rgb(89, 0, 255);
-
 }
 .top-nav{
     display: block;
@@ -29,20 +24,17 @@ $col: #727272;
     z-index: 99;
 }
 .nav-container{
-    display: flex;
-    justify-content: center;
+    @include position;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    // border: 2px solid black
 }
 .left-phone{
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    // border: 2px solid red;
     & a{
     text-decoration: none;
     color: $col;
@@ -60,9 +52,7 @@ $col: #727272;
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    // border: 2px solid red;
     padding: 0;
-
 }
 .dropdown{
     position: relative;
@@ -84,58 +74,50 @@ $col: #727272;
     box-sizing: border-box;
     height: 100%;
     color: #fff;
-    background: #e22e25;
+    background: $color-red;
     text-decoration: none;
 }
-
 header {
     display: block;
-    // position: fixed;
-    // z-index: 1000!important;
     top: 48px;
     left: 0;
     width: 100%;
     background-color: #fff;
     height: 85px;
     padding-top: 0px;
-    // border: 3px solid green;
 }
 .header-container{
-    display: flex;
-    justify-content: center;
+    @include position;
     height: 100px;
     top: 48px;
-    // border: 2px solid red;
     width: 57%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
-
 .logo{
     float: left;
     width: 25%;
     height: 100%;
-    // border: 2px solid blue;
     & a{
     text-decoration: none;
-    color: red;
+    color: $color-red;
     text-transform: uppercase;
     font-size: 50px;
     font-weight: 700;
     transition: all 0.7s ease;
     &:hover{
-        color: rgb(89, 0, 255);
-        transition: all 0.7s ease;
-    }
-    }
+    color: rgb(89, 0, 255);
+    transition: all 0.7s ease;
+    text-decoration: none;
+}
+}
 }
 .bottom-nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    // border: 2px solid blue;
     width: 75%;
 }
 .b-nav{
@@ -144,15 +126,13 @@ header {
     list-style: none;
     width: 80%;
     height: 30px;
-    // border: 2px solid blue;
     & li {
-        font-weight: 500;
-        color: $col;
-    }
+    font-weight: 500;
+    color: $col;
+}
 }
 .dropdown{
     cursor: pointer;
-    // border: 2px solid yellow;
     z-index: 9999;
     & a{
     display: flex;
@@ -161,11 +141,10 @@ header {
     text-decoration: none;
     color: $col;
     font-weight: 500;
-    // border: 1px solid red;
     background-color: white;
     padding: 2px;
     &:hover{
-        color: red;
+    color: $color-red;
     }
 }
 }
@@ -181,11 +160,9 @@ header {
     border-bottom: 0;
     border-left: .3em solid transparent; 
 }
-
 .dropdown ul{
     list-style: none;
-    padding: 0;
-    
+    padding: 0;  
 }
 .dropdown-ul {
     box-sizing: border-box;
@@ -196,7 +173,6 @@ header {
     .dropdown-ul{
     display: block;
     margin-top: 10px;
-    // border: 2px solid red;
     background: #fff;
     }
 }
@@ -210,9 +186,9 @@ header {
     width: 60px;
     transition: all 1s ease;
     & li{
-        list-style: none;
-        color: $col;
-    }
+    list-style: none;
+    color: $col;
+}
 }
 .connect{
     width: 120px;
@@ -221,42 +197,29 @@ li a{
     text-decoration: none;
     color: $col;
     &:hover{
-        color: red;
-        transition: all 0.7s ease;
-    }
+    color: $color-red;
+    transition: all 0.7s ease;
+}
 }
 
 
-// ----------------------------------------------------------------
+// ------------------------------карусель----------------------------------
 .carousel-inner{
     height: 600px;
     width: 300px;
 }
-// .block-up{
-//     display: flex;
-//     justify-content: center;
-//     height: 600px;
-//     width: 100%;
-//     position: absolute;
-//     border: 2px solid red;
-//     z-index: 100;
-//     // background: white;
-//     opacity: 0.4;
-// }
 .pay-at_home{
     margin-top: 20px;
     position: absolute;
     width: 100%;
     text-align: center;
     vertical-align: middle;
-    // background-color: white;
     text-transform: uppercase;
     color: black;
     z-index: 100;
     font-weight: 700;
     color: white;
     transition-duration: 5s;
-    // border: 2px solid red;
 }
 .link-social{
     top: 150px;
@@ -264,17 +227,14 @@ li a{
     position: absolute;
     width: 70px;
     height: 400px;
-    // background: #999;
-    // border: 2px solid red;
     z-index: 2;
 }
 .link-fb, .link-insta, .link-telegram, .link-callback, .link-off{
-    display: flex;
-    justify-content: center;
+    @include position;
     align-items: center;
     width: 70px;
     height: 70px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid $color-red;
     background: rgb(84, 86, 231);
     transition: all 0.5s ease;
     &:hover{
@@ -291,7 +251,7 @@ li a{
     background: rgb(231, 84, 84);
     z-index: 2;
     &:hover{
-        background: rgb(84, 86, 231);
+    background: rgb(84, 86, 231);
     }
 }
 .off-arrow{
@@ -300,44 +260,140 @@ li a{
 .on-arrow{
     display: block;
 }
-
+// -----------------------------------------карусель------------------------
 .section-foryou{
-    // display: flex;
     box-sizing: border-box;
-    height: 500px;
-    border: 2px solid rgb(55, 0, 255);
-    background: gray;
+    padding-bottom: 100px;
+    height: auto;
+    // border: 5px solid rgb(55, 0, 255);
 }
 .row{
-    display: flex;
-    justify-content: space-around;
-    width: 75%;
-    // border: 2px solid rgb(28, 163, 73);
-    
+    @include position;
+    width: 100%;
 }
 .title-foryou{
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
-    color: red;
+    color: $color-red;
     margin-top: 20px;
 }
 .md-3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
-    border: 3px solid rgb(218, 215, 215);
     border-radius: 25px;
+    margin-right: 10px;
+    box-shadow: -5px 5px 10px 0px rgb(100, 99, 99);
 }
 .img-pixelnet{
     width: 80%;
     height: 40%;
-    // border: 2px solid red;
 }
 .text-head{
-    text-align: left;
+    text-align: center;
+    color: $color-red;
+    font-size: 18px;
 }
-p{
+
+.btn-foryou{
+    position: absolute;
+    top: 90%;
+    border: none;
+    transition: ease 0.5s all;
+    border: 1px solid $color-red;
+    border-radius: 5px;
+    padding: 0 4px;
+    &:hover{
+    background: $color-red;
     color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+}
+.section-why_we{
+    @include position;
+    box-sizing: border-box;
+    height: auto;
+    // border: 5px solid rgb(255, 102, 0);
+    z-index: -500;
+}
+.bgd-why_we{
+    width: 100%;
+    height: 500px;
+    z-index: -500;
+}
+.container-why_we{
+    @include position;
+    position: absolute;
+    // border: 4px solid rgb(0, 204, 255);
+    height: 500px;
+    width: 70%;
+    z-index: 500;
+    background: black;
+    opacity: 0.8;
+}
+.blocks{
+    width: 50%;
+    padding: 30px;
+    // border: 2px solid red;
+    color: white;
+}
+.blocks-list{
+    list-style: none;
+    line-height: 2.5;
+    & li::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: $color-red;
+    float: left;
+    margin: 20px 0px 0px -15px;
+    border-radius: 50%;
+    }
+}
+.left-part{
+    text-align: right;
+    & h1{
+        font-weight: 700;
+        font-size: 55px;
+    }
+}
+
+.container-we_pixel{
+    @include position;
+    position: absolute;
+    // border: 4px solid rgb(0, 204, 255);
+    height: 800px;
+    width: 70%;
+    padding: 20px;
+    & h2{
+        position: absolute;
+        color: $color-red;
+    }
+}
+.we-pixel{
+    margin-top: 80px;
+    width: 100%;
+    height: 45%;
+    // border: 2px solid red;
+}
+.img-team{
+    margin-right: 40px;
+}
+.title{
+position: absolute;
+display: inline;
+width: 100%;
+top: 58%;
+margin-left: 40px;
+color: $color-red;
+font-weight: bold;
+}
+.we-pixel_content{
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    // border: 2px solid red;
+    padding-left: 20px;
 }

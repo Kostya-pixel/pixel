@@ -1,0 +1,6 @@
+$col: #727272;
+$color-red:  #e22e25;
+@mixin position {
+    display: flex;
+    justify-content: center;
+}
