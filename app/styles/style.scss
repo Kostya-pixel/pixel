@@ -35,7 +35,7 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    & a{
+    & a .number-phone {
     text-decoration: none;
     color: $col;
     font-weight: 500;
@@ -129,6 +129,9 @@ header {
     & li {
     font-weight: 500;
     color: $col;
+    & a{
+      text-decoration: none;  
+    }
 }
 }
 .dropdown{
@@ -173,6 +176,8 @@ header {
     .dropdown-ul{
     display: block;
     margin-top: 10px;
+    padding-left: 5px;
+    height: 100px;
     background: #fff;
     }
 }
@@ -209,7 +214,7 @@ li a{
     width: 300px;
 }
 .pay-at_home{
-    margin-top: 20px;
+    margin-top: 40px;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -220,6 +225,10 @@ li a{
     font-weight: 700;
     color: white;
     transition-duration: 5s;
+    & p{
+    font-weight: normal;
+    margin-top: 40px;
+    }
 }
 .link-social{
     top: 150px;
@@ -265,11 +274,11 @@ li a{
     box-sizing: border-box;
     padding-bottom: 100px;
     height: auto;
-    // border: 5px solid rgb(55, 0, 255);
 }
 .row{
     @include position;
     width: 100%;
+
 }
 .title-foryou{
     text-align: center;
@@ -315,8 +324,6 @@ li a{
     @include position;
     box-sizing: border-box;
     height: auto;
-    // border: 5px solid rgb(255, 102, 0);
-    z-index: -500;
 }
 .bgd-why_we{
     width: 100%;
@@ -326,7 +333,6 @@ li a{
 .container-why_we{
     @include position;
     position: absolute;
-    // border: 4px solid rgb(0, 204, 255);
     height: 500px;
     width: 70%;
     z-index: 500;
@@ -336,7 +342,6 @@ li a{
 .blocks{
     width: 50%;
     padding: 30px;
-    // border: 2px solid red;
     color: white;
 }
 .blocks-list{
@@ -350,6 +355,8 @@ li a{
     float: left;
     margin: 20px 0px 0px -15px;
     border-radius: 50%;
+    border: 5px solid rgb(255, 153, 0);
+
     }
 }
 .left-part{
@@ -360,40 +367,96 @@ li a{
     }
 }
 
+.section-we_pixel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 .container-we_pixel{
-    @include position;
-    position: absolute;
-    // border: 4px solid rgb(0, 204, 255);
+    display: flex;
+    flex-direction: column;
     height: 800px;
     width: 70%;
     padding: 20px;
     & h2{
-        position: absolute;
+        text-align: center;
         color: $color-red;
     }
 }
+.img-and_text{
+    display: flex;
+    margin-top: 10px;
+}
 .we-pixel{
-    margin-top: 80px;
     width: 100%;
-    height: 45%;
-    // border: 2px solid red;
 }
 .img-team{
     margin-right: 40px;
 }
 .title{
-position: absolute;
 display: inline;
 width: 100%;
 top: 58%;
-margin-left: 40px;
+margin-top: 20px;
 color: $color-red;
 font-weight: bold;
 }
 .we-pixel_content{
-    position: absolute;
     width: 100%;
-    top: 65%;
-    // border: 2px solid red;
-    padding-left: 20px;
+}
+.we-pixel_block__links p{
+    text-align: center
+}
+.block_links{
+    @include position;
+    height: 65px; 
+    margin-top: 10px;
+}
+.wepixel{
+    align-items: center;
+    width: 90px;
+    height: 50px;
+    margin-right: 4px;
+    background:rgb(231, 84, 84);
+    border: none;
+    transition: all 0.5s ease;
+    &:hover{
+    height: 60px;
+    width: 90px;
+    background: rgb(84, 86, 231);
+    } 
+
+}
+footer{
+    width: 100%;
+}
+.footer-section{
+@include position;
+width: 100%;
+height: 400px;
+margin-top: 20px;
+background: rgba(0, 0, 0, 1);
+}
+.footer-block{
+@include position;
+width: 70%;
+height: auto;
+}
+.footer-block_item{
+color: white;
+padding-top: 50px;
+padding-left: 50px;
+width: 30%;
+& h4{
+font-weight: 700;
+margin-bottom: 20px;
+}
+& ul li{
+list-style: none;
+line-height: 2;
+& a{
+    text-decoration: none;
+}
+}
 }
