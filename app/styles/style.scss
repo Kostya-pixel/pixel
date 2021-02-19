@@ -17,7 +17,7 @@
     float: left;
     width: 100%;
     height: 50px;
-    background: #f3f3f3;
+    background: $col-bgd;
     border-bottom: 1px solid #e3e3e3;
     color: #999;
     font-size: 18px;
@@ -137,7 +137,7 @@ header {
 .dropdown{
     cursor: pointer;
     z-index: 9999;
-    & a{
+    & .after{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -175,14 +175,19 @@ header {
 .dropdown:hover{
     .dropdown-ul{
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
     padding-left: 5px;
-    height: 100px;
-    background: #fff;
+    height: auto;
+    background: $col-bgd;
+    border: 1px solid rgb(192, 190, 190);
+    & a{
+        text-decoration: none;
+    }
     }
 }
 .dropdown-ul li{
     margin-top: 10px;
+    margin-bottom: 10px;
     list-style: none;
 }
 .dropdown-block{
@@ -231,49 +236,69 @@ li a{
     }
 }
 .link-social{
-    top: 150px;
+    top: 250px;
     left: -70px;
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     width: 70px;
     height: 400px;
-    z-index: 2;
+    z-index: 1000;
 }
 .link-fb, .link-insta, .link-telegram, .link-callback, .link-off{
     @include position;
     align-items: center;
-    width: 70px;
-    height: 70px;
-    border-bottom: 2px solid $color-red;
-    background: rgb(84, 86, 231);
+    width: 55px;
+    height: 55px;
+    margin-bottom: 2px;
     transition: all 0.5s ease;
+    z-index: 1000;
+    border-radius: 50%;
     &:hover{
-    width: 100px;
-    background: rgb(231, 84, 84);
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 80px;
+    border-radius:  0 10% 10% 0;
     }
 }
+.off{
+    color:#e94e4e;
+    &:hover{
+        color: $col-inst;
+    }
+}
+
 .link-callback{
     margin-top: 15px;
 }
 .link-off{
-    position: absolute;
+    position: fixed;
+    outline: none;
+    outline-offset:-2px;
     margin-top: 30px;
-    background: rgb(231, 84, 84);
-    z-index: 2;
-    &:hover{
-    background: rgb(84, 86, 231);
-    }
+    background: none;
+    border: none;
+    z-index: 1000;
 }
 .off-arrow{
     display: none;
+    color:#e94e4e;
+    &:hover{
+        color: $col-inst;
+    }
 }
 .on-arrow{
     display: block;
+    color:#e94e4e;
+    &:hover{
+        color: $col-inst;
+    }
 }
 // -----------------------------------------карусель------------------------
 .section-foryou{
     box-sizing: border-box;
     padding-bottom: 100px;
     height: auto;
+    background: $col-bgd;
 }
 .row{
     @include position;
@@ -285,24 +310,21 @@ li a{
     text-transform: uppercase;
     font-weight: 700;
     color: $color-red;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 .md-3{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    border-radius: 25px;
+    background: rgb(255, 253, 253);
     margin-right: 10px;
-    box-shadow: -5px 5px 10px 0px rgb(100, 99, 99);
 }
 .img-pixelnet{
     width: 80%;
     height: 40%;
 }
 .text-head{
-    text-align: center;
     color: $color-red;
     font-size: 18px;
+    padding-top: 10px;
 }
 
 .btn-foryou{
@@ -416,15 +438,13 @@ font-weight: bold;
 .wepixel{
     align-items: center;
     width: 90px;
-    height: 50px;
+    height: 40px;
     margin-right: 4px;
-    background:rgb(231, 84, 84);
-    border: none;
     transition: all 0.5s ease;
+    border-bottom: none;
     &:hover{
     height: 60px;
     width: 90px;
-    background: rgb(84, 86, 231);
     } 
 
 }

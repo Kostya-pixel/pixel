@@ -8,11 +8,13 @@ let arrowOn = document.querySelector('.on-arrow');
             socialBlock.style.left = '0px';
             arrowOff.style.display = 'block';
             arrowOn.style.display = 'none';
+            btnLink.style.outline = 'none';
         }
         else {
             socialBlock.style.left = '-70px';
             arrowOn.style.display = 'block';
             arrowOff.style.display = 'none';
+            btnLink.style.outline = 'none';
         }
         
     }
